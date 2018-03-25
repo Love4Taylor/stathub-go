@@ -59,7 +59,7 @@ esac
 
 echo "----------------------------------------------------"
 echo "| Server install sucessful, Please start it using  |"
-echo "| ./service {start|stop|restart}                   |"
+echo "| systemctl {start|stop|restart} stathub           |"
 echo "| Now it will automatic start                      |"
 echo "|                                                  |"
 echo "| Feedback: https://github.com/likexian/stathub-go |"
@@ -67,7 +67,7 @@ echo "| Thank you for your using, By Li Kexian           |"
 echo "| StatHub, Apache License, Version 2.0             |"
 echo "----------------------------------------------------"
 
-$sudo ./service start
+$sudo systemctl start stathub
 sleep 1
 
 KEY=$(grep key server.json | cut -d \" -f 4)
